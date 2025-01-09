@@ -1,4 +1,4 @@
-# Bank-Churn-Analysis
+# Bank Customer Churn Analysis
 ![image](https://github.com/user-attachments/assets/ad8e3904-2abe-457a-8931-e118c6d1a61c)
 
 ## Background
