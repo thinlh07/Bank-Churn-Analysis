@@ -1,4 +1,6 @@
 # Bank-Churn-Analysis
+![image](https://github.com/user-attachments/assets/ad8e3904-2abe-457a-8931-e118c6d1a61c)
+
 ## Background
 The bank is facing a high customer churn rate, which indicates a significant portion of its customers are discontinuing their relationships with the institution. This churn threatens the bank’s growth, profitability, and long-term customer loyalty. Understanding the key drivers of churn is essential for developing targeted strategies to improve customer retention and overall satisfaction.
 ### Objective
@@ -12,7 +14,8 @@ The main goal of this analysis is to uncover patterns and correlations between c
 The dataset comprises 10,000 rows with customer profiles, including demographic details (age, gender, geography), financial metrics (balance, credit score, salary), and behavioral attributes (activity status, product usage, credit card ownership). Data Source: [LINK](https://www.kaggle.com/datasets/santoshd3/bank-customers)
 ## Data Preparation
 - Data duplication & missing values: There are no duplicate data and missing values in the dataset.
- ![image](https://github.com/user-attachments/assets/97034b35-ac0a-4fcf-bf47-1ff8eb6f2c08)
+![image](https://github.com/user-attachments/assets/cb9a7fee-d2d9-49cb-98bc-8cc113d90062)
+
 
 - Feature Engineering: Extracting age group features, and transforming the data into desired form.
 - Encoding: The encoding method used is ordinal encoding to convert categorical data (geography) in numerical.
@@ -43,9 +46,15 @@ The dataset comprises 10,000 rows with customer profiles, including demographic 
 
 **10. Customer Status with Exited:** Inactive customers have a higher churn rate (13.0%) compared to active customers (7.3%).
 
+**11. Heatmap Findings:** The heatmap indicates that there is non-linear relationship between all features with the target variable (Exit). \
+![image](https://github.com/user-attachments/assets/6c8a94ad-db0d-418f-9841-e3543f47dbc6)
+## Dashboard
+![image](https://github.com/user-attachments/assets/ec12c0d8-b354-4ace-ba28-cedd627c1821)
+
+
 ## Recommendation
 **1.** The bank should consider retirement-focused financial products, investment planning tools, or age-targeted advisory services to retain customers in this age group.\
 **2.** The bank should revisit its product bundling strategy, making sure that customers with multiple products feel they are receiving sufficient value. Alternatively, it may be useful to personalize bundles and create more flexible options.\
 **3.** A thorough investigation into customer satisfaction and service quality in Germany should be conducted. The bank should focus on improving its customer support and perhaps reconsider its product offerings in Germany to align with local needs and expectations.\
 **4.** The bank should develop re-engagement strategies to target inactive customers, such as personalized outreach, special offers, or financial consultations, to re-engage them and reduce churn.
-![image](https://github.com/user-attachments/assets/ec12c0d8-b354-4ace-ba28-cedd627c1821)
+
