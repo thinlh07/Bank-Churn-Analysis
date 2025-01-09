@@ -5,9 +5,10 @@
 
 ## Data 
 ## Findings
-- **Credit Score with Exit Variable:** A common in credit score of retained and exited customers, which dispers around 600 - 700 scores. Noteably, all low credit score customers lie on churned list. 
-- **Age with Exited Variable:** Churned Age Distribution is concentrated on 40 -55 
-- **Balance with Exited Variable:** Surprisingly, account balance of churned customer is more concentrated (from 40k to 130k) than retained customers, with high dispersion from zero. 
+ **1. Credit Score with Exit Variable:** The distribution of credit scores for both retained and churned customers tends to be similar, mainly clustered between scores of 600 - 700.
+- Key Insight: Low credit score customers are more likely to churn, as all low credit score customers (below 600) fall under the churned category.
+ **2. Age with Exited Variable:** Churned customers are concentrated in the age group of 40-55 years. 
+ **3. Balance with Exited Variable:** Churned customers have account balances primarily ranging from 40k to 130k, while retained customers show more variation and lower concentration in balances, at zero.
 - **Estimated Salary with Exited Variable:** There is no difference on salary distribution of retained and churned customer, which are concentrated around 50k -100k.
 - **Geography with Exited:** The number of churned customer in France and Germany is similar, around 810 customers, while in Spain, it is lower at 410. However, the churn rate in Germany should be approximately 40%, which is about double the rate in France, which is around 20%.
 - **Gender with Exited:** Female, at 11.4%, have tendency to exit than Male with only 9%.
