@@ -68,9 +68,42 @@ _Key Insight:_ Credit card users may be experiencing dissatisfaction with credit
 **11. Heatmap Findings:** The heatmap indicates that there is non-linear relationship between all features with the target variable (Exit). \
 ![image](https://github.com/user-attachments/assets/6c8a94ad-db0d-418f-9841-e3543f47dbc6)
 ## Dashboard
+I used Power BI to perform visualisation. At first, I 
+### 1. Column Operations
+- There is no significant difference in churn rate between income groups (found out by Python). So, EstimatedSalary have been removed.
+- Column Rename: Columns have been renamed for clarity. For example, rename "HasCrCard" to "Credit Card", "NumOfProducts" to "No.Products" and so on.
+- Value Replacement: For clarity, I replace all binary values (0 vs 1 ) with suitable values. For example, replace 0 to  "Inactive" and 1 to "Active" in "Active Member" column, replace 0 to "Retained" and 1 to "Churned" in "Exited" column and so on.
 ![image](https://github.com/user-attachments/assets/ec12c0d8-b354-4ace-ba28-cedd627c1821)
 
 Power Bi Dashboard [Link](https://github.com/thinlh07/Bank-Churn-Analysis/blob/main/Bank%20Churn%20Report.pbix)
+### 2. Data Normalisation
+
+
+#### 2.1. Separation of Fact and Dimension Attributes
+The dataset was divided into a fact table and multiple dimension tables:
+
+- Fact Table: A fact_churn table was created to contain transactional and measurable data, including CustomerID, ChurnStatus, JoinDate, and foreign keys linking to the dimension tables.
+- Dimension Tables: Descriptive tables were designed to represent entities like country, account balance, age, credit score
+#### 2.2. Creation of Tables
+The fact_churn table was populated with churn-related metrics and references to dimension tables.
+A Customer Dimension table was created to store demographic details such as age and gender.
+A Plan Dimension table captured information about subscription plans, including PlanType and pricing.
+A Location Dimension table recorded geographical details such as country and region.
+Establishing Relationships
+
+
+
+Primary and foreign key relationships were established between the fact_churn table and the dimension tables. This ensured a clear and efficient star schema structure, which optimized data queries and supported robust data analysis in Power BI.
+Next step, I applied data normalization to restructure the dataset for churn analysis, organizing it into a star schema for improved efficiency and analysis. The process involved the following steps:
+#### 1. Table Creations:
+- Fact_churn table: Included alls and references to dimensions.
+- Dim_CreditScore: Stored Credit Score Range, Credit Score Level and CreditScoreID.
+- Dim_Country: Captured CountryID and Country.
+- Dim_Age: Stored Age Range and AgeID.
+- Dim_Balance: Stored Balance Range and BalanceRangeID.
+![image](https://github.com/user-attachments/assets/b9071eb0-7c27-4972-b6f0-117af97e2f76)
+
+
 
 ## Recommendation
 **1.** The bank should consider retirement-focused financial products, investment planning tools, or age-targeted advisory services to retain customers in this age group.\
