@@ -106,7 +106,7 @@ Following the initial step, I created **No.Inactive Members**,**No.Churned Custo
 Eventually, I developed a dashboard (shown in the screenshot below) that delves into key features such as account balance, age group, activity status, and credit score, analyzing their impact on the churn rate. This dashboard allowed me to visualize and interpret how these factors influence customer retention, helping to identify patterns and insights that could drive strategic improvements.
 
 ![image](https://github.com/user-attachments/assets/6a718d59-a7a7-4017-89b9-0d5b817bdeb4)
-Power Bi Dashboard [Link].(https://github.com/thinlh07/Bank-Churn-Analysis/blob/main/Bank%20Churn%20Report.pbix))
+Power Bi Dashboard [Link].(https://github.com/thinlh07/Bank-Churn-Analysis/blob/main/Bank%20Churn%20Report.pbix)
 ## Recommendation
 **1.** The bank should consider retirement-focused financial products, investment planning tools, or age-targeted advisory services to retain customers in this age group.\
 **2.** The bank should revisit its product bundling strategy, making sure that customers with multiple products feel they are receiving sufficient value. Alternatively, it may be useful to personalize bundles and create more flexible options.\
