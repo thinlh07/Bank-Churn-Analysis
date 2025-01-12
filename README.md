@@ -13,14 +13,21 @@ The main goal of this analysis is to uncover patterns and correlations between c
 ## Data Overview
 The dataset comprises 10,000 rows with customer profiles, including demographic details (age, gender, geography), financial metrics (balance, credit score, salary), and behavioral attributes (activity status, product usage, credit card ownership). Data Source: [LINK](https://www.kaggle.com/datasets/santoshd3/bank-customers)
 ## Data Preparation
+For Data Preparation, I utilized Python for thorough data checking and preprocessing. Through Python libraries like pandas, this involved cleaning and validating the dataset by handling missing values, removing duplicates, and ensuring data consistency.
+
+
+
+
+
 - Data duplication & missing values: There are no duplicate data and missing values in the dataset.
 ![image](https://github.com/user-attachments/assets/cb9a7fee-d2d9-49cb-98bc-8cc113d90062)
-
 
 - Feature Engineering: Extracting age group features, and transforming the data into desired form.
 - Encoding: The encoding method used is ordinal encoding to convert categorical data (geography) in numerical.
 
-## Key Insights and Findings
+## Exploratory Data Analysis
+In Exploratory Data Analysis (EDA), I leveraged Matplotlib and Seaborn libraries in Python to conduct comprehensive univariate, bivariate, and multivariate analyses. These visualizations helped me explore the distribution of features and examine the relationships between different variables. Through various diagrams, such as bar charts, heatmaps, and column charts, I was able to identify patterns, correlations, and key insights in the dataset, which informed the subsequent steps of data normalization and model building.
+
 **1. Exit Distribution:** 
 - Churned Customers: 20.4% of customers are labeled as "exited" or "churned."
   ![image](https://github.com/user-attachments/assets/60b79058-a95e-4823-ac7f-0aefaa8292de)
@@ -38,8 +45,6 @@ The dataset comprises 10,000 rows with customer profiles, including demographic 
 
 **4. Balance with Exited Variable:** Churned customers have account balances primarily ranging from 40k to 130k, while retained customers show more variation and lower concentration in balances, at zero.\
 ![image](https://github.com/user-attachments/assets/fbf53cb3-4bb5-41d6-83f5-ad1b7ec4fff1)
-
-    _Key Insight:_ Surprisingly, churned customers with medium to high balances are exiting, which might suggest dissatisfaction with the products or services offered.
     
 **5. Estimated Salary with Exited Variable:** No significant difference in salary distribution between churned and retained customers, with both groups concentrated around 50k to 100k. 
 ![image](https://github.com/user-attachments/assets/aebba98f-b1ba-4a9d-9941-601dbfc894cc)
@@ -48,15 +53,12 @@ The dataset comprises 10,000 rows with customer profiles, including demographic 
 **6. Geography with Exited:** The number of churned customer in France and Germany is similar, around 810 customers, while in Spain, it is lower at 410. However, the churn rate in Germany should be approximately 40%, which is about double the rate in France, which is around 20%.
 ![image](https://github.com/user-attachments/assets/9203a4c2-e29c-4bca-9b1f-7dcda6437e7a) ![image](https://github.com/user-attachments/assets/8b63487d-b7c8-4c95-b6a8-b9ba71e728af)
 
-
 **7. Gender with Exited:** Females exhibit a higher churn rate (11.4%) compared to males (9%). 
 ![image](https://github.com/user-attachments/assets/e829dd12-2a45-4906-a646-2e358ba876ce)
-
 
 **8. Credit Card User with Exited:**  Credit card users exhibit a higher churn rate (14.2%) compared to non-credit card users (6.1%). \
 
    ![image](https://github.com/user-attachments/assets/c10daa05-cff9-4a5a-9f63-4fe141f2d1e8)
-_Key Insight:_ Credit card users may be experiencing dissatisfaction with credit-related products or services. 
    
 **9. Product Usage with Exited:** Approximately 14.1% of customers using only one product have churned, which is higher compared to other groups. Notably, customers using three or four products have a retention rate close to zero, with almost no retained customers in those groups. 
 ![image](https://github.com/user-attachments/assets/4739a118-e68b-4b69-a2b8-2faa14b5f8a2)
@@ -64,20 +66,21 @@ _Key Insight:_ Credit card users may be experiencing dissatisfaction with credit
 **10. Customer Status with Exited:** Inactive customers have a higher churn rate (13.0%) compared to active customers (7.3%).
 ![image](https://github.com/user-attachments/assets/4c71ddcf-0b59-41d4-904a-bd75afb5081f)
 
-
 **11. Heatmap Findings:** The heatmap indicates that there is non-linear relationship between all features with the target variable (Exit). \
 ![image](https://github.com/user-attachments/assets/6c8a94ad-db0d-418f-9841-e3543f47dbc6)
+
 ## Dashboard
-I used Power BI to perform visualisation. At first, I 
+In the Visualization step, I utilized Power BI to create interactive and insightful reports. Power BI allowed me to visualize key metrics, trends, and relationships uncovered during the analysis. I built dashboards that included various visualizations such as charts, tables, and slicers, enabling me to explore and present the data in a clear and intuitive way. This helped in deriving actionable insights, making data-driven decisions, and enhancing the overall understanding of customer behavior and churn patterns.
 ### 1. Column Operations
-- There is no significant difference in churn rate between income groups (found out by Python). So, EstimatedSalary have been removed.
+- There is no significant difference in churn rate between income groups (found out by Python). So, EstimatedSalary column was removed.
 - Column Rename: Columns have been renamed for clarity. For example, rename "HasCrCard" to "Credit Card", "NumOfProducts" to "No.Products" and so on.
 - Value Replacement: For clarity, I replace all binary values (0 vs 1 ) with suitable values. For example, replace 0 to  "Inactive" and 1 to "Active" in "Active Member" column, replace 0 to "Retained" and 1 to "Churned" in "Exited" column and so on. \
   
 ![image](https://github.com/user-attachments/assets/83e8a00f-edc6-471d-861c-6c3a929b5e4d)
 
 ### 2. Data Normalisation
-In this project, I applied data normalization techniques to restructure the dataset for churn analysis, transforming it into a star schema to enhance efficiency, reduce redundancy, and improve analytical capabilities. The normalization process followed a systematic approach to organize data into fact and dimension tables. 
+I applied data normalization techniques to restructure the dataset for churn analysis, transforming it into a star schema to enhance efficiency, reduce redundancy, and improve analytical capabilities. The normalization process followed a systematic approach to organize data into fact and dimension tables. 
+
 The dataset was divided into a fact table and multiple dimension tables:
 The dataset was normalized into a fact table and several dimension tables as follows:
 - Fact Table: A fact_churn table was created to contain transactional and measurable data, including CustomerID, ChurnStatus, and foreign keys linking to the dimension tables.
@@ -88,7 +91,7 @@ The dataset was normalized into a fact table and several dimension tables as fol
   Dim_Age: Grouped customers into age brackets for analysis (e.g., AgeGroup vs AgeGroupID).\
   Dim_CreditScore: Classified credit scores into ranges (CreditScore Range), CreditScore Level and CreditScoreID. 
   
-The model was built by establishing primary and foreign key relationships between the fact_churn table and the dimension tables, adhering to the principles of a star schema. This ensured a clear and efficient structure, enabling seamless querying and analysis. \
+The model was built by establishing primary and foreign key relationships between the fact_churn table and the dimension tables, adhering to the principles of a star schema. This ensured a clear and efficient structure, enabling seamless querying and analysis. 
 
 ![image](https://github.com/user-attachments/assets/226237ae-1e0e-43e0-b3dc-8c1b4e32f53e)
 
@@ -105,8 +108,12 @@ Following the initial step, I created **No.Inactive Members**,**No.Churned Custo
 
 Eventually, I developed a dashboard (shown in the screenshot below) that delves into key features such as account balance, age group, activity status, and credit score, analyzing their impact on the churn rate. This dashboard allowed me to visualize and interpret how these factors influence customer retention, helping to identify patterns and insights that could drive strategic improvements.
 
+Power Bi Dashboard [Link](https://github.com/thinlh07/Bank-Churn-Analysis/blob/main/Bank%20Churn%20Report.pbix) 
+
 ![image](https://github.com/user-attachments/assets/6a718d59-a7a7-4017-89b9-0d5b817bdeb4)
-Power Bi Dashboard [Link].(https://github.com/thinlh07/Bank-Churn-Analysis/blob/main/Bank%20Churn%20Report.pbix)
+
+### 4. Insights
+
 ## Recommendation
 **1.** The bank should consider retirement-focused financial products, investment planning tools, or age-targeted advisory services to retain customers in this age group.\
 **2.** The bank should revisit its product bundling strategy, making sure that customers with multiple products feel they are receiving sufficient value. Alternatively, it may be useful to personalize bundles and create more flexible options.\
