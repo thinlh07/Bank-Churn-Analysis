@@ -113,7 +113,11 @@ Power Bi Dashboard [Link](https://github.com/thinlh07/Bank-Churn-Analysis/blob/m
 ![image](https://github.com/user-attachments/assets/6a718d59-a7a7-4017-89b9-0d5b817bdeb4)
 
 ### 4. Insights
-
+1. Regards to credit score level, the churn rate is highest in the poor credit score group (<400), at 100%. Meanwhile, the figures for other group are relatively similar, at around 20%.
+2. In terms of activity status, 51.51% customers are active while 48.5% are inactive. The high percent of inactive customer groups indicate high risk for churn as inactive customers are likely to leave the bank. 
+3.Customers are predominantly based in France (50.14%), followed by Germany (25.09%) and Spain (24.77%). While France holds the largest customer base, Germany exhibits the highest churn rate, emphasizing the need for region-specific strategies to effectively address churn and enhance customer retention in these markets. 
+4. The 30–39 age group leads in customer count with 4.3k, while the 50–59 age group has the highest churn rate at 56%, followed by the 40–49 and 60–69 age groups. This trend suggests that customers nearing retirement are more likely to leave the bank. On the other hand, the under-20 age group has the lowest number of customers and the lowest churn rate, indicating strong retention but limited market penetration in this demographic.
+5. The churn rate for females stands at 25.07%, significantly higher than the 16.46% churn rate for males. This disparity highlights a potential gender-based difference in customer retention, suggesting the need for targeted strategies to better understand and address the reasons behind higher churn among female customers.
 ## Recommendation
 **1.** The bank should consider retirement-focused financial products, investment planning tools, or age-targeted advisory services to retain customers in this age group.\
 **2.** The bank should revisit its product bundling strategy, making sure that customers with multiple products feel they are receiving sufficient value. Alternatively, it may be useful to personalize bundles and create more flexible options.\
